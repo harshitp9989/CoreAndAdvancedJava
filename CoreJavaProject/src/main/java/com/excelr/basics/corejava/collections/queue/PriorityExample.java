@@ -9,15 +9,16 @@ public class PriorityExample {
 
         // Add tasks with different priorities to the priority queue
         priorityQueue.offer(new Task("Task 1", 10));
-        priorityQueue.offer(new Task("Task 2", 9));
         priorityQueue.offer(new Task("Task 3", 8));
         priorityQueue.offer(new Task("Task 4", 7));
-        priorityQueue.offer(new Task("Task 5", 6));
         priorityQueue.offer(new Task("Task 6", 5));
         priorityQueue.offer(new Task("Task 7", 4));
         priorityQueue.offer(new Task("Task 8", 3));
         priorityQueue.offer(new Task("Task 9", 2));
         priorityQueue.offer(new Task("Task 10", 1));
+        priorityQueue.offer(new Task("Task 2", 9));
+        priorityQueue.offer(new Task("Task 5", 6));
+
 
         // Process tasks in priority order
         while (!priorityQueue.isEmpty()) {
