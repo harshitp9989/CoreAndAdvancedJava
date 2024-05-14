@@ -1,19 +1,22 @@
-package com.excelr.basics.corejava.collections.map.hashcollision.hashcollisiondemo;
+package com.excelr.basics.corejava.collections.map.hashcollision.hashcollisionfix;
 
 public class Person {
 
     private String firstName;
     private String lastName;
 
-    public Person(String first, String lastName) {
-        this.firstName = first;
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
         this.lastName = lastName;
     }
 
     @Override
     public int hashCode() {
         // Example of a simple hash code calculation based on firstName and lastName
-        return 1;
+    	int hash = 17;
+        hash = 31 * hash + firstName.hashCode();
+        hash = 31 * hash + lastName.hashCode();
+        return hash;
     }
 
     public static void main(String[] args) {
